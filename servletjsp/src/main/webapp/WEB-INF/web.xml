@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+  xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" 
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+  version="4.0">
+
+  <display-name>servletjsp</display-name>
+ 
+  <servlet>
+    <servlet-name>list.jsp</servlet-name>
+    <jsp-file>/JSP/list.jsp</jsp-file>
+   </servlet>
+   
+   <servlet>
+    <servlet-name>retrieve.jsp</servlet-name>
+    <jsp-file>/JSP/retrieve.jsp</jsp-file>
+   </servlet>
+   
+   <servlet>
+    <servlet-name>write.jsp</servlet-name>
+    <jsp-file>/JSP/write.jsp</jsp-file>
+   </servlet>
+   
+   <servlet>
+    <servlet-name>reply.jsp</servlet-name>
+    <jsp-file>/JSP/reply.jsp</jsp-file>
+   </servlet>
+   
+   <servlet>
+    <servlet-name>listPage.jsp</servlet-name>
+    <jsp-file>/JSP/listPage.jsp</jsp-file>
+   </servlet>
+   
+   <servlet>
+    <servlet-name>page.jsp</servlet-name>
+    <jsp-file>/JSP/page.jsp</jsp-file>
+   </servlet>
+   
+   <servlet-mapping>
+    <servlet-name>list.jsp</servlet-name>
+    <url-pattern>/list.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>retrieve.jsp</servlet-name>
+    <url-pattern>/retrieve.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>write.jsp</servlet-name>
+    <url-pattern>/write.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>reply.jsp</servlet-name>
+    <url-pattern>/reply.jsp</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+    <servlet-name>listPage.jsp</servlet-name>
+    <url-pattern>/listPage.jsp</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+    <servlet-name>page.jsp</servlet-name>
+    <url-pattern>/page.jsp</url-pattern>
+  </servlet-mapping>
+  
+   <filter>
+    <filter-name>SetCharEncoding</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+      <init-param>
+        <param-name>encoding</param-name>
+        <param-value>utf-8</param-value>
+      </init-param>
+      
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>
